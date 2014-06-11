@@ -1,0 +1,904 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+  Copyright 2012 Applied Geographics, Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="AppGeo.Clients.CommonHost">
+    <Position X="4.25" Y="4" Width="3" />
+    <Members>
+      <Field Name="_domain" Hidden="true" />
+      <Field Name="_password" Hidden="true" />
+      <Field Name="_serverUrl" Hidden="true" />
+      <Field Name="_serverVersion" Hidden="true" />
+      <Field Name="_user" Hidden="true" />
+      <Method Name="DefaultAllowAllCertificates" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAQBAIAAAgAAgAAAEAAQQQIAAgAUAIEDAAAAAAAAAAA=</HashCode>
+      <FileName>CommonHost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppGeo.Clients.CommonMapService">
+    <Position X="7.75" Y="4" Width="2.75" />
+    <Members>
+      <Field Name="_dataFrames" Hidden="true" />
+      <Field Name="_defaultDataFrame" Hidden="true" />
+      <Field Name="_host" Hidden="true" />
+      <Field Name="_name" Hidden="true" />
+    </Members>
+    <AssociationLine Name="DataFrames" Type="AppGeo.Clients.CommonDataFrame" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.188" Y="4" />
+        <Point X="9.188" Y="3.625" />
+        <Point X="12.188" Y="3.625" />
+        <Point X="12.188" Y="4" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.481" Y="0.072" Height="0.16" Width="2.6" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAQACAAACAAECCEAJIAAEAA=</HashCode>
+      <FileName>CommonMapService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="DataFrames" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.CommonDataFrame">
+    <Position X="11" Y="4" Width="2.75" />
+    <Members>
+      <Field Name="_dpi" Hidden="true" />
+      <Field Name="_isDefault" Hidden="true" />
+      <Field Name="_layers" Hidden="true" />
+      <Field Name="_name" Hidden="true" />
+      <Field Name="_service" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Layers" Type="AppGeo.Clients.CommonLayer" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.562" Y="4" />
+        <Point X="12.562" Y="3.625" />
+        <Point X="15.438" Y="3.625" />
+        <Point X="15.438" Y="4" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.141" Y="0.077" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABAAIQAAAAAAAAAQAAAAAQQAAAAAQAAEAAEAAAAEkAA=</HashCode>
+      <FileName>CommonDataFrame.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Layers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.CommonLayer" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="4" Width="3" />
+    <Members>
+      <Field Name="_children" Hidden="true" />
+      <Field Name="_dataFrame" Hidden="true" />
+      <Field Name="_defaultVisible" Hidden="true" />
+      <Field Name="_featureIDField" Hidden="true" />
+      <Field Name="_featureType" Hidden="true" />
+      <Field Name="_fields" Hidden="true" />
+      <Field Name="_geometryField" Hidden="true" />
+      <Field Name="_id" Hidden="true" />
+      <Field Name="_legend" Hidden="true" />
+      <Field Name="_maximumPixelSize" Hidden="true" />
+      <Field Name="_minimumPixelSize" Hidden="true" />
+      <Field Name="_name" Hidden="true" />
+      <Field Name="_parent" Hidden="true" />
+      <Field Name="_selectable" Hidden="true" />
+      <Field Name="_type" Hidden="true" />
+      <Method Name="CheckHasFeatureIDField" Hidden="true" />
+      <Method Name="CheckIsFeatureLayer" Hidden="true" />
+      <Method Name="CompareTo" Hidden="true" />
+      <Method Name="CreateDistanceGeometry" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Class Name="AppGeo.Clients.CommonLayer.FieldSelection" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CommonLayer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <AssociationLine Name="Fields" Type="AppGeo.Clients.CommonField" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.188" Y="4" />
+        <Point X="16.188" Y="3.596" />
+        <Point X="18.875" Y="3.596" />
+        <Point X="18.875" Y="4" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.016" Y="0.098" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Legend" Type="AppGeo.Clients.CommonLegend" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.812" Y="4" />
+        <Point X="15.812" Y="3.235" />
+        <Point X="21.812" Y="3.235" />
+        <Point X="21.812" Y="4" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="5.412" Y="0.515" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AEAQIAAIABBAkARIAgDcQATQQAAIBAAAISQIAAJAqAE=</HashCode>
+      <FileName>CommonLayer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Legend" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Fields" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AppGeo.Clients.FeatureData">
+    <Position X="14.25" Y="1.5" Width="1.75" />
+    <AssociationLine Name="Rows" Type="AppGeo.Clients.FeatureRow" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.125" Y="1.5" />
+        <Point X="15.125" Y="1.125" />
+        <Point X="17.438" Y="1.125" />
+        <Point X="17.438" Y="1.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.848" Y="0.069" Height="0.16" Width="1.536" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAQAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommonLayer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="Rows" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.FeatureRow">
+    <Position X="16.5" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>CommonLayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppGeo.Clients.CommonField">
+    <Position X="17.75" Y="4" Width="2.25" />
+    <Members>
+      <Field Name="_alias" Hidden="true" />
+      <Field Name="_geometryType" Hidden="true" />
+      <Field Name="_name" Hidden="true" />
+      <Field Name="_required" Hidden="true" />
+      <Field Name="_type" Hidden="true" />
+      <Method Name="ExtractShortName" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AQAAIABAAAMgAAQEAAAAABQAAAAQAAAAAQAAAAAQAAg=</HashCode>
+      <FileName>CommonField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppGeo.Clients.CommonMap">
+    <Position X="31.25" Y="4" Width="2.5" />
+    <Members>
+      <Field Name="_dataFrame" Hidden="true" />
+      <Field Name="_extent" Hidden="true" />
+      <Field Name="_height" Hidden="true" />
+      <Field Name="_imageType" Hidden="true" />
+      <Field Name="_resolution" Hidden="true" />
+      <Field Name="_width" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>GAAACABABACAAABQCBAQAEQACBAgAAAAhEAAMABAAAg=</HashCode>
+      <FileName>CommonMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppGeo.Clients.CommonLegend">
+    <Position X="20.5" Y="4" Width="3" />
+    <Members>
+      <Field Name="_groups" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Groups" Type="AppGeo.Clients.CommonLegendGroup" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.188" Y="4" />
+        <Point X="22.188" Y="3.625" />
+        <Point X="25.438" Y="3.625" />
+        <Point X="25.438" Y="4" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.798" Y="0.077" Height="0.16" Width="2.505" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommonLegend.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Groups" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.CommonLegendGroup">
+    <Position X="24" Y="4" Width="3.25" />
+    <Members>
+      <Field Name="_classes" Hidden="true" />
+      <Field Name="_heading" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Classes" Type="AppGeo.Clients.CommonLegendClass" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="25.812" Y="4" />
+        <Point X="25.812" Y="3.625" />
+        <Point X="29.25" Y="3.625" />
+        <Point X="29.25" Y="4" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="1.046" Y="0.088" Height="0.16" Width="2.455" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAABgAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>CommonLegendGroup.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Classes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.CommonLegendClass">
+    <Position X="27.75" Y="4" Width="3" />
+    <Members>
+      <Field Name="_imageIsTransparent" Hidden="true" />
+      <Field Name="_label" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEBAAgAAAABAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommonLegendClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppGeo.Clients.CommonGeocodeService">
+    <Position X="34.25" Y="4" Width="3.25" />
+    <Members>
+      <Field Name="_addressFields" Hidden="true" />
+      <Field Name="_coordinateSystem" Hidden="true" />
+      <Field Name="_host" Hidden="true" />
+      <Field Name="_minimumScore" Hidden="true" />
+      <Field Name="_name" Hidden="true" />
+      <Field Name="_spellingSensitivity" Hidden="true" />
+      <Method Name="GetAddressValues" Hidden="true" />
+      <Method Name="ValidateAddressValues" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>SAIAIgACAAoAAAAQAgEAAAQAAAAACAAAiAACRIAAQAA=</HashCode>
+      <FileName>CommonGeocodeService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppGeo.Clients.MatchedAddress" BaseTypeListCollapsed="true">
+    <Position X="34.25" Y="2" Width="1.75" />
+    <Members>
+      <Method Name="CompareTo" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAwEAAIAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>CommonGeocodeService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.AgsHost">
+    <Position X="4.25" Y="9.5" Width="3" />
+    <Members>
+      <Field Name="_serviceDescriptions" Hidden="true" />
+      <Property Name="AllServiceNames" Hidden="true" />
+      <Property Name="GeocodeServiceNames" Hidden="true" />
+      <Method Name="GetAgsVersion" Hidden="true" />
+      <Method Name="GetGeocodeService" Hidden="true" />
+      <Method Name="GetMapService" Hidden="true" />
+      <Property Name="MapServiceNames" Hidden="true" />
+    </Members>
+    <AssociationLine Name="ServiceDescriptions" Type="AppGeo.Clients.Ags.Proxy.ServiceDescription" FixedFromPoint="true">
+      <Path>
+        <Point X="5.75" Y="10.601" />
+        <Point X="5.75" Y="12.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-2.737" Y="1.178" Height="0.16" Width="2.801" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAgACgAAAEAAQAAAAAAQAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Ags\AgsHost.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ServiceDescriptions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.AgsMapService">
+    <Position X="7.75" Y="9.5" Width="2.75" />
+    <Members>
+      <Field Name="_mapServer" Hidden="true" />
+      <Field Name="_mapServerDefinition" Hidden="true" />
+      <Property Name="IsAvailable" Hidden="true" />
+      <Method Name="Reload" Hidden="true" />
+    </Members>
+    <AssociationLine Name="MapServerDefinition" Type="AppGeo.Clients.Ags.Proxy.MapServerDefinition" FixedToPoint="true">
+      <Path>
+        <Point X="9.125" Y="10.601" />
+        <Point X="9.125" Y="12.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-1.268" Y="1.397" Height="0.16" Width="1.337" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="MapServer" Type="AppGeo.Clients.Ags.Proxy.MapServer">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.887" Y="2.146" Height="0.16" Width="0.941" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAIAAAAAAAAAAAAAAAAAAACEAAACAAAAIAAAAA=</HashCode>
+      <FileName>Ags\AgsMapService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MapServerDefinition" />
+      <Property Name="MapServer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.AgsDataFrame" Collapsed="true">
+    <Position X="11" Y="9.5" Width="2.75" />
+    <Members>
+      <Field Name="_mapServerInfo" Hidden="true" />
+      <Method Name="AgsDataFrame" Hidden="true" />
+      <Method Name="CreateLayerHierarchy" Hidden="true" />
+      <Method Name="GetMap" Hidden="true" />
+    </Members>
+    <AssociationLine Name="MapServerInfo" Type="AppGeo.Clients.Ags.Proxy.MapServerInfo" FixedToPoint="true">
+      <Path>
+        <Point X="12.375" Y="10.13" />
+        <Point X="12.375" Y="12.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.95" Y="1.868" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAABAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ags\AgsDataFrame.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MapServerInfo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.AgsLayer" Collapsed="true">
+    <Position X="14.25" Y="9.5" Width="3" />
+    <Members>
+      <Field Name="_mapLayerInfo" Hidden="true" />
+      <Field Name="_mapServerLegendInfo" Hidden="true" />
+      <Field Name="_service" Hidden="true" />
+      <Method Name="AgsLayer" Hidden="true" />
+      <Method Name="GetFeatureCount" Hidden="true" />
+      <Method Name="GetFeatureData" Hidden="true" />
+      <Method Name="GetFeatureExtent" Hidden="true" />
+      <Method Name="GetFeatureIDs" Hidden="true" />
+      <Method Name="GetFeatureTable" Hidden="true" />
+      <Field Name="MetersPerFoot" Hidden="true" />
+      <Method Name="RecordSetToFeatureData" Hidden="true" />
+      <Method Name="RecordSetToIds" Hidden="true" />
+      <Method Name="RecordSetToTable" Hidden="true" />
+    </Members>
+    <AssociationLine Name="MapLayerInfo" Type="AppGeo.Clients.Ags.Proxy.MapLayerInfo" FixedFromPoint="true">
+      <Path>
+        <Point X="15.75" Y="10.13" />
+        <Point X="15.75" Y="12.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.897" Y="1.846" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="MapServerLegendInfo" Type="AppGeo.Clients.Ags.Proxy.MapServerLegendInfo" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.812" Y="10.13" />
+        <Point X="16.812" Y="11.003" />
+        <Point X="18.792" Y="11.003" Type="JumpStart" />
+        <Point X="18.958" Y="11.003" Type="JumpEnd" />
+        <Point X="21.688" Y="11.003" />
+        <Point X="21.688" Y="12.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="3.522" Y="1.544" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAA4AgAAAAGAAAIIBAACAAAEEIAAAAA=</HashCode>
+      <FileName>Ags\AgsLayer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MapLayerInfo" />
+      <Property Name="MapServerLegendInfo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.AgsField" Collapsed="true">
+    <Position X="17.75" Y="9.5" Width="2.25" />
+    <Members>
+      <Field Name="_field" Hidden="true" />
+      <Method Name="AgsField" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Field" Type="AppGeo.Clients.Ags.Proxy.Field">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.44" Y="1.846" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Ags\AgsField.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Field" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.AgsMap" Collapsed="true">
+    <Position X="31.25" Y="9.5" Width="2.5" />
+    <Members>
+      <Field Name="_layerList" Hidden="true" />
+      <Field Name="_queryList" Hidden="true" />
+      <Field Name="_service" Hidden="true" />
+      <Method Name="AddLayer" Hidden="true" />
+      <Method Name="AddLayerAndChildren" Hidden="true" />
+      <Method Name="AddLayers" Hidden="true" />
+      <Method Name="AgsMap" Hidden="true" />
+      <Method Name="Clear" Hidden="true" />
+      <Method Name="GetImageBytes" Hidden="true" />
+      <Method Name="GetImageUrl" Hidden="true" />
+      <Method Name="GetMapImage" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAQAEAAAAAAEAAAAAAAhEAAAABAAAA=</HashCode>
+      <FileName>Ags\AgsMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.AgsLegend" Collapsed="true">
+    <Position X="20.5" Y="9.5" Width="3" />
+    <Members>
+      <Field Name="_mapServerLegendInfo" Hidden="true" />
+      <Method Name="AgsLegend" Hidden="true" />
+    </Members>
+    <AssociationLine Name="MapServerLegendInfo" Type="AppGeo.Clients.Ags.Proxy.MapServerLegendInfo" FixedToPoint="true">
+      <Path>
+        <Point X="22" Y="10.13" />
+        <Point X="22" Y="12.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.332" Y="1.835" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Ags\AgsLegend.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MapServerLegendInfo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.AgsLegendGroup" Collapsed="true">
+    <Position X="24" Y="9.5" Width="3.25" />
+    <Members>
+      <Field Name="_classes" Hidden="true" />
+      <Field Name="_mapServerLegendGroup" Hidden="true" />
+      <Method Name="AgsLegendGroup" Hidden="true" />
+    </Members>
+    <AssociationLine Name="MapServerLegendGroup" Type="AppGeo.Clients.Ags.Proxy.MapServerLegendGroup" FixedToPoint="true">
+      <Path>
+        <Point X="25.625" Y="10.13" />
+        <Point X="25.625" Y="12.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.436" Y="1.846" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAABAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Ags\AgsLegendGroup.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MapServerLegendGroup" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.AgsLegendClass" Collapsed="true">
+    <Position X="27.75" Y="9.5" Width="3" />
+    <Members>
+      <Field Name="_mapServerLegendClass" Hidden="true" />
+      <Method Name="AgsLegendClass" Hidden="true" />
+      <Property Name="Image" Hidden="true" />
+    </Members>
+    <AssociationLine Name="MapServerLegendClass" Type="AppGeo.Clients.Ags.Proxy.MapServerLegendClass" FixedToPoint="true">
+      <Path>
+        <Point X="29.562" Y="10.13" />
+        <Point X="29.562" Y="12.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.395" Y="1.835" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAQABAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ags\AgsLegendClass.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MapServerLegendClass" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.AgsGeocodeService" Collapsed="true">
+    <Position X="34.25" Y="9.5" Width="3.25" />
+    <Members>
+      <Field Name="_geocodeServer" Hidden="true" />
+      <Field Name="_locatorProperties" Hidden="true" />
+      <Method Name="AgsGeocodeService" Hidden="true" />
+      <Method Name="ConvertAddressValuesToProperties" Hidden="true" />
+      <Property Name="EndOffset" Hidden="true" />
+      <Method Name="FindAddressCandidates" Hidden="true" />
+      <Method Name="GeocodeAddress" Hidden="true" />
+      <Method Name="GetModifiedLocatorProperties" Hidden="true" />
+      <Property Name="IsAvailable" Hidden="true" />
+      <Method Name="Reload" Hidden="true" />
+      <Property Name="SideOffset" Hidden="true" />
+      <Property Name="SideOffsetUnits" Hidden="true" />
+    </Members>
+    <AssociationLine Name="GeocodeServer" Type="AppGeo.Clients.Ags.Proxy.GeocodeServer" FixedToPoint="true">
+      <Path>
+        <Point X="35.875" Y="10.13" />
+        <Point X="35.875" Y="13" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.969" Y="2.606" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>CAAAAABAAAgAAAAQAAAAAAQAAAAAJAAASAACAKAAAAA=</HashCode>
+      <FileName>Ags\AgsGeocodeService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GeocodeServer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.Proxy.Catalog" Collapsed="true">
+    <Position X="4.25" Y="13" Width="3" />
+    <InheritanceLine Type="AppGeo.Clients.Ags.Proxy.AgsSoapClient" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="38.75" Y="13.63" />
+        <Point X="38.75" Y="14.004" />
+        <Point X="5.75" Y="14.004" />
+        <Point X="5.75" Y="13.63" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>QAAgAAAAAAAAEAAAAAAAAAAAggAAAAAIAAAAAAAAAQA=</HashCode>
+      <FileName>Ags\Proxy\Catalog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.Proxy.MapServer" Collapsed="true">
+    <Position X="7.75" Y="13" Width="2.75" />
+    <InheritanceLine Type="AppGeo.Clients.Ags.Proxy.AgsSoapClient" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="38.75" Y="13.63" />
+        <Point X="38.75" Y="14.006" />
+        <Point X="9.125" Y="14.006" />
+        <Point X="9.125" Y="13.63" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>CBIFAhAAIAEJAwQWUWhEoAQAgABIFJAVAQgCIAEgAAA=</HashCode>
+      <FileName>Ags\Proxy\MapServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.Proxy.MapServerDefinition" Collapsed="true">
+    <Position X="8.25" Y="12.25" Width="2.25" />
+    <Members>
+      <Field Name="_mapServerInfos" Hidden="true" />
+      <Field Name="_url" Hidden="true" />
+      <Method Name="MapServerDefinition" Hidden="true" />
+      <Method Name="NewMapServer" Hidden="true" />
+      <Property Name="Url" Hidden="true" />
+    </Members>
+    <AssociationLine Name="MapServerInfos" Type="AppGeo.Clients.Ags.Proxy.MapServerInfo" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.438" Y="12.25" />
+        <Point X="9.438" Y="11.875" />
+        <Point X="12.062" Y="11.875" />
+        <Point X="12.062" Y="12.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.3" Y="0.079" Height="0.16" Width="2.396" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAgAAAQAAAAACAAAAAABAAA=</HashCode>
+      <FileName>Ags\Proxy\MapServerDefinition.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="MapServerInfos" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.Proxy.MapServerInfo" Collapsed="true">
+    <Position X="11" Y="12.25" Width="2.75" />
+    <AssociationLine Name="MapLayerInfos" Type="AppGeo.Clients.Ags.Proxy.MapLayerInfo" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.688" Y="12.25" />
+        <Point X="12.688" Y="11.875" />
+        <Point X="15.438" Y="11.875" />
+        <Point X="15.438" Y="12.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.517" Y="0.068" Height="0.16" Width="2.293" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EARCgYQABIZhgKhAQIDBCQQACAgCECCCEAAQAAAAAQQ=</HashCode>
+      <FileName>Ags\Proxy\MapServerInfo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="MapLayerInfos" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.Proxy.MapLayerInfo" Collapsed="true">
+    <Position X="14.25" Y="12.25" Width="3" />
+    <AssociationLine Name="Fields" Type="AppGeo.Clients.Ags.Proxy.Fields" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.688" Y="12.88" />
+        <Point X="14.688" Y="13.505" />
+        <Point X="15.5" Y="13.505" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.308" Y="0.373" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>lBgjAQYkICqzAMghYorEWS5hwSzODJSKCYAIImAO4AA=</HashCode>
+      <FileName>Ags\Proxy\MapLayerInfo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Fields" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.Proxy.Field" Collapsed="true">
+    <Position X="17.75" Y="12.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAABAAIECQAWACIoAGgRCAgRAEAAAAYAjBAwAuQA=</HashCode>
+      <FileName>Ags\Proxy\Field.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.Proxy.MapServerLegendClass" Collapsed="true">
+    <Position X="27.75" Y="12.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAEAAgAAgAAAAAAAAAAAAAIACABAAAEAAAAAA=</HashCode>
+      <FileName>Ags\Proxy\Services_Generated.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.Proxy.GeocodeServer" Collapsed="true">
+    <Position X="34.25" Y="13" Width="3.25" />
+    <InheritanceLine Type="AppGeo.Clients.Ags.Proxy.AgsSoapClient" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="38.75" Y="13.63" />
+        <Point X="38.75" Y="14.007" />
+        <Point X="35.875" Y="14.007" />
+        <Point X="35.875" Y="13.63" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAgBCAAAAAgAAjRCAAAAoAAAAAAAAAgAACA=</HashCode>
+      <FileName>Ags\Proxy\GeocodeServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.Proxy.AgsLogger" Collapsed="true">
+    <Position X="38" Y="10.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAQAAAAAAAAAgAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Ags\Proxy\AgsLogger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.Proxy.AgsSoapClient" Collapsed="true">
+    <Position X="38" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Ags\Proxy\AgsSoapClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.Proxy.AgsLoggingXmlWriter" Collapsed="true">
+    <Position X="38" Y="12.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIEgAAQAFCGCAABkgAEAAQBAABAgAASAYSABUAMAAI=</HashCode>
+      <FileName>Ags\Proxy\AgsLoggingXmlWriter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.Proxy.AgsLoggingXmlReader" Collapsed="true">
+    <Position X="38" Y="11.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Ags\Proxy\AgsLoggingXmlReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.Proxy.ServiceDescription" Collapsed="true">
+    <Position X="4.25" Y="12.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAIEAAjAAAAAIAAAAQAAAACAAAACQAAEAAAAEA=</HashCode>
+      <FileName>Ags\Proxy\ServiceDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.Proxy.MapServerLegendInfo" Collapsed="true">
+    <Position X="20.5" Y="12.25" Width="3" />
+    <AssociationLine Name="LegendGroups" Type="AppGeo.Clients.Ags.Proxy.MapServerLegendGroup" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.312" Y="12.25" />
+        <Point X="22.312" Y="11.875" />
+        <Point X="25.312" Y="11.875" />
+        <Point X="25.312" Y="12.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.601" Y="0.11" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAIAAAAQAAAQAAAAAAAAAAgAAQAA=</HashCode>
+      <FileName>Ags\Proxy\Services_Generated.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="LegendGroups" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.Proxy.MapServerLegendGroup" Collapsed="true">
+    <Position X="24" Y="12.25" Width="3.25" />
+    <AssociationLine Name="LegendClasses" Type="AppGeo.Clients.Ags.Proxy.MapServerLegendClass" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="25.938" Y="12.25" />
+        <Point X="25.938" Y="11.875" />
+        <Point X="28.938" Y="11.875" />
+        <Point X="28.938" Y="12.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="2.043" Y="0.11" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Ags\Proxy\Services_Generated.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LegendClasses" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AppGeo.Clients.MapGraphics">
+    <Position X="31.25" Y="0.5" Width="2.5" />
+    <Members>
+      <Field Name="_graphics" Hidden="true" />
+      <Field Name="_image" Hidden="true" />
+      <Field Name="_mapTransform" Hidden="true" />
+      <Method Name="~MapGraphics" Hidden="true" />
+      <Method Name="AddMetafileComment" Hidden="true" />
+      <Method Name="BeginContainer" Hidden="true" />
+      <Method Name="Clear" Hidden="true" />
+      <Property Name="Clip" Hidden="true" />
+      <Property Name="ClipBounds" Hidden="true" />
+      <Property Name="CompositingMode" Hidden="true" />
+      <Property Name="CompositingQuality" Hidden="true" />
+      <Method Name="CopyFromScreen" Hidden="true" />
+      <Method Name="CreateObjRef" Hidden="true" />
+      <Field Name="DefaultImageQuality" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Property Name="DpiX" Hidden="true" />
+      <Property Name="DpiY" Hidden="true" />
+      <Method Name="DrawArc" Hidden="true" />
+      <Method Name="DrawBezier" Hidden="true" />
+      <Method Name="DrawBeziers" Hidden="true" />
+      <Method Name="DrawClosedCurve" Hidden="true" />
+      <Method Name="DrawCurve" Hidden="true" />
+      <Method Name="DrawEllipse" Hidden="true" />
+      <Method Name="DrawIcon" Hidden="true" />
+      <Method Name="DrawIconUnstretched" Hidden="true" />
+      <Method Name="DrawImage" Hidden="true" />
+      <Method Name="DrawImageUnscaled" Hidden="true" />
+      <Method Name="DrawImageUnscaledAndClipped" Hidden="true" />
+      <Method Name="DrawLine" Hidden="true" />
+      <Method Name="DrawLines" Hidden="true" />
+      <Method Name="DrawPath" Hidden="true" />
+      <Method Name="DrawPie" Hidden="true" />
+      <Method Name="DrawPolygon" Hidden="true" />
+      <Method Name="DrawRectangle" Hidden="true" />
+      <Method Name="DrawRectangles" Hidden="true" />
+      <Method Name="EndContainer" Hidden="true" />
+      <Method Name="EnumerateMetafile" Hidden="true" />
+      <Method Name="Equals" Hidden="true" />
+      <Method Name="ExcludeClip" Hidden="true" />
+      <Method Name="FillClosedCurve" Hidden="true" />
+      <Method Name="FillEllipse" Hidden="true" />
+      <Method Name="FillPath" Hidden="true" />
+      <Method Name="FillPie" Hidden="true" />
+      <Method Name="FillPolygon" Hidden="true" />
+      <Method Name="FillRectangle" Hidden="true" />
+      <Method Name="FillRectangles" Hidden="true" />
+      <Method Name="FillRegion" Hidden="true" />
+      <Method Name="Flush" Hidden="true" />
+      <Method Name="GetContextInfo" Hidden="true" />
+      <Method Name="GetEncoderInfo" Hidden="true" />
+      <Method Name="GetHalftonePalette" Hidden="true" />
+      <Method Name="GetHashCode" Hidden="true" />
+      <Method Name="GetHdc" Hidden="true" />
+      <Method Name="GetLifetimeService" Hidden="true" />
+      <Method Name="GetNearestColor" Hidden="true" />
+      <Method Name="InitializeLifetimeService" Hidden="true" />
+      <Property Name="InterpolationMode" Hidden="true" />
+      <Method Name="IntersectClip" Hidden="true" />
+      <Property Name="IsClipEmpty" Hidden="true" />
+      <Method Name="IsVisible" Hidden="true" />
+      <Property Name="IsVisibleClipEmpty" Hidden="true" />
+      <Method Name="MapGraphics" Hidden="true" />
+      <Method Name="MeasureCharacterRanges" Hidden="true" />
+      <Method Name="MeasureString" Hidden="true" />
+      <Method Name="MultiplyTransform" Hidden="true" />
+      <Property Name="PageScale" Hidden="true" />
+      <Property Name="PageUnit" Hidden="true" />
+      <Property Name="PixelOffsetMode" Hidden="true" />
+      <Method Name="ReleaseHdc" Hidden="true" />
+      <Property Name="RenderingOrigin" Hidden="true" />
+      <Method Name="ResetClip" Hidden="true" />
+      <Method Name="ResetTransform" Hidden="true" />
+      <Method Name="Restore" Hidden="true" />
+      <Method Name="RotateTransform" Hidden="true" />
+      <Method Name="Save" Hidden="true" />
+      <Method Name="ScaleTransform" Hidden="true" />
+      <Method Name="SetClip" Hidden="true" />
+      <Property Name="SmoothingMode" Hidden="true" />
+      <Property Name="TextContrast" Hidden="true" />
+      <Property Name="TextRenderingHint" Hidden="true" />
+      <Method Name="ToPointF" Hidden="true" />
+      <Method Name="ToRectangleF" Hidden="true" />
+      <Property Name="Transform" Hidden="true" />
+      <Method Name="TransformPoints" Hidden="true" />
+      <Method Name="TranslateClip" Hidden="true" />
+      <Method Name="TranslateTransform" Hidden="true" />
+      <Property Name="VisibleClipBounds" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AHCAQYTXBLII8ACQniHKgkQA0KEAQoHrjEHQ4gTbwAA=</HashCode>
+      <FileName>MapGraphics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppGeo.Clients.Ags.Proxy.Fields" Collapsed="true">
+    <Position X="15.5" Y="13.25" Width="1.75" />
+    <AssociationLine Name="FieldArray" Type="AppGeo.Clients.Ags.Proxy.Field">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.256" Y="0.675" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Ags\Proxy\Services_Generated.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="FieldArray" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Struct Name="AppGeo.Clients.AddressValue">
+    <Position X="34.25" Y="0.5" Width="1.75" />
+    <Members>
+      <Method Name="AddressValue" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>CommonGeocodeService.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

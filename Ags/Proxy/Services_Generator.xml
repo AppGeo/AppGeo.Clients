@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- 
+  Copyright 2012 Applied Geographics, Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<!-- 
+   To create Services_Generated.cs:
+     * Use this file as the input parameters to the WSDL tool:
+         C:\> wsdl /parameters:Services_Generator.xml
+     * Edit the new Services_Generated.cs:
+       - Comment out all [System.Diagnostics.DebuggerStepThroughAttribute()] lines
+       - In classes inheriting from SoapHttpClientProtocol
+         o Rename the class to its base service name (MapServer, GeocodeServer, etc.) if necessary
+         o Change the inheritance of SoapHttpClientProtocol to AgsSoapClient
+         o Comment out the default constructor
+       - In the CircularArc and EllipticArc classes, change the types of the following from Point to PointN:
+         o the centerPointField field 
+         o the CenterPoint property
+       - In esriImageFormat verify that there is a esriImagePNG32 value after esriImageSVG
+         o if not, add it by hand
+   
+   To find AGS service endpoints on the Web, open a search engine and search with the terms:
+   
+     "Current Version: 10.1" MapServer
+   
+   changing the version number and service type as appropriate.
+-->
+
+<wsdlParameters xmlns="http://microsoft.com/webReference/">
+  <nologo>true</nologo>
+  <parsableerrors>true</parsableerrors>
+  <sharetypes>true</sharetypes>
+  <out>Services_Generated.cs</out>
+  <namespace>AppGeo.Clients.Ags.Proxy</namespace>
+  <documents>
+
+    <!-- Catalog -->
+    <document>http://geodata.webapi.ubc.ca/arcgis/services/Base/Catalog?wsdl</document>
+
+    <!-- MapServer -->
+    <document>http://geodata.webapi.ubc.ca/arcgis/services/Base/Ortho2011/MapServer?wsdl</document>
+
+    <!-- FeatureServer -->
+    <document>http://arcgis.dtsagile.com/arcgis/services/WildfireMaps/CrowdSource/MapServer/FeatureServer?wsdl</document>
+    
+    <!-- GeocodeServer -->
+    <document>http://services.arcgisonline.co.nz/arcgis/services/LINZ/gazetteer/GeocodeServer?wsdl</document>
+    
+    <!-- GeometryServer -->
+    <document>http://services.arcgisonline.co.nz/arcgis/services/Utilities/Geometry/GeometryServer?wsdl</document>
+
+    <!-- GPServer -->
+    <document>http://siselvideo.com/arcgis/services/WorldBank_KRG/Export_to_Shapefile/GPServer?wsdl</document>
+
+    <!-- ImageServer -->
+    <document>http://www.srvy.co/arcgis/services/Afghan_16/ImageServer?wsdl</document>
+
+    <!-- GeoDataServer -->
+    <!--<document>?wsdl</document>-->
+
+    <!-- NAServer -->
+    <document>http://energysampleserver.esri.com/arcgis/services/Haynesville/Transportation/MapServer/NAServer?wsdl</document>
+    
+    <!-- MobileServer -->
+    <document>http://energysampleserver.esri.com/arcgis/services/UK/Operational/MapServer/MobileServer?wsdl</document>
+  </documents>
+  <webReferenceOptions>
+    <verbose>false</verbose>
+    <codeGenerationOptions>properties</codeGenerationOptions>
+    <style>client</style>
+  </webReferenceOptions>
+</wsdlParameters>

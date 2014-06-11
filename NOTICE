@@ -1,0 +1,8 @@
+﻿
+AppGeo.Clients
+Copyright 2012 Applied Geographics, Inc.
+
+OGC geometry support provided by GeoAPI.NET (http://geoapi.codeplex.com) and
+NetTopologySuite (https://code.google.com/p/nettopologysuite).  Both are licensed under
+the GNU Library General Public License (LGPL) (http://www.gnu.org/licenses/gpl.txt and 
+http://www.gnu.org/licenses/lgpl.txt).

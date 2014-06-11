@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D77454C-0EBB-40FF-8EE2-FC5B1917170C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AppGeo.Clients</RootNamespace>
+    <AssemblyName>AppGeo.Clients</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GeoAPI">
+      <HintPath>ReferenceBin\GeoAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="NetTopologySuite">
+      <HintPath>ReferenceBin\NetTopologySuite.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ags\AgsAuthenticationToken.cs" />
+    <Compile Include="Ags\AgsTokenService.cs" />
+    <Compile Include="FeatureData.cs" />
+    <Compile Include="FeatureRow.cs" />
+    <Compile Include="Transform\AffineTransformation.cs" />
+    <Compile Include="Ags\AgsDataFrame.cs" />
+    <Compile Include="Ags\AgsException.cs" />
+    <Compile Include="Ags\AgsField.cs" />
+    <Compile Include="Ags\AgsGeocodeService.cs" />
+    <Compile Include="Ags\AgsHost.cs" />
+    <Compile Include="Ags\AgsLayer.cs" />
+    <Compile Include="Ags\AgsLegend.cs" />
+    <Compile Include="Ags\AgsLegendClass.cs" />
+    <Compile Include="Ags\AgsLegendGroup.cs" />
+    <Compile Include="Ags\AgsMap.cs" />
+    <Compile Include="Ags\AgsMapService.cs" />
+    <Compile Include="Ags\Proxy\AgsLogger.cs" />
+    <Compile Include="Ags\Proxy\AgsLoggingXmlReader.cs" />
+    <Compile Include="Ags\Proxy\AgsLoggingXmlWriter.cs" />
+    <Compile Include="Ags\Proxy\AgsSoapClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ags\Proxy\BezierCurve.cs" />
+    <Compile Include="Ags\Proxy\Catalog.cs" />
+    <Compile Include="Ags\Proxy\CircularArc.cs" />
+    <Compile Include="Ags\Proxy\EllipticArc.cs" />
+    <Compile Include="Ags\Proxy\Envelope.cs" />
+    <Compile Include="Ags\Proxy\EnvelopeN.cs" />
+    <Compile Include="Ags\Proxy\FeatureServer.cs" />
+    <Compile Include="Ags\Proxy\Field.cs" />
+    <Compile Include="Ags\Proxy\GeocodeServer.cs" />
+    <Compile Include="Ags\Proxy\GeographicCoordinateSystem.cs" />
+    <Compile Include="Ags\Proxy\Geometry.cs" />
+    <Compile Include="Ags\Proxy\GeometryServer.cs" />
+    <Compile Include="Ags\Proxy\GPServer.cs" />
+    <Compile Include="Ags\Proxy\ImageDescription.cs" />
+    <Compile Include="Ags\Proxy\ImageDisplay.cs" />
+    <Compile Include="Ags\Proxy\ImageServer.cs" />
+    <Compile Include="Ags\Proxy\ImageType.cs" />
+    <Compile Include="Ags\Proxy\Line.cs" />
+    <Compile Include="Ags\Proxy\LineElement.cs" />
+    <Compile Include="Ags\Proxy\MapDescription.cs" />
+    <Compile Include="Ags\Proxy\MapLayerInfo.cs" />
+    <Compile Include="Ags\Proxy\MapServer.cs" />
+    <Compile Include="Ags\Proxy\MapServerDefinition.cs" />
+    <Compile Include="Ags\Proxy\MapServerInfo.cs" />
+    <Compile Include="Ags\Proxy\MarkerElement.cs" />
+    <Compile Include="Ags\Proxy\MobileServer.cs" />
+    <Compile Include="Ags\Proxy\Multipoint.cs" />
+    <Compile Include="Ags\Proxy\MultipointN.cs" />
+    <Compile Include="Ags\Proxy\NAServer.cs" />
+    <Compile Include="Ags\Proxy\Path.cs" />
+    <Compile Include="Ags\Proxy\Point.cs" />
+    <Compile Include="Ags\Proxy\PointN.cs" />
+    <Compile Include="Ags\Proxy\Polygon.cs" />
+    <Compile Include="Ags\Proxy\PolygonElement.cs" />
+    <Compile Include="Ags\Proxy\PolygonN.cs" />
+    <Compile Include="Ags\Proxy\Polyline.cs" />
+    <Compile Include="Ags\Proxy\PolylineN.cs" />
+    <Compile Include="Ags\Proxy\ProjectedCoordinateSystem.cs" />
+    <Compile Include="Ags\Proxy\PropertySet.cs" />
+    <Compile Include="Ags\Proxy\PropertySetProperty.cs" />
+    <Compile Include="Ags\Proxy\QueryFilter.cs" />
+    <Compile Include="Ags\Proxy\RgbColor.cs" />
+    <Compile Include="Ags\Proxy\Ring.cs" />
+    <Compile Include="Ags\Proxy\Segment.cs" />
+    <Compile Include="Ags\Proxy\ServiceDescription.cs" />
+    <Compile Include="Ags\Proxy\Services_Generated.cs" />
+    <Compile Include="Ags\Proxy\SimpleFillSymbol.cs" />
+    <Compile Include="Ags\Proxy\SimpleLineSymbol.cs" />
+    <Compile Include="Ags\Proxy\SimpleMarkerSymbol.cs" />
+    <Compile Include="Ags\Proxy\SpatialFilter.cs" />
+    <Compile Include="Ags\Proxy\SpatialReference.cs" />
+    <Compile Include="ArcIms\ArcImsDataFrame.cs" />
+    <Compile Include="ArcIms\ArcImsEnumerations.cs" />
+    <Compile Include="ArcIms\ArcImsException.cs" />
+    <Compile Include="ArcIms\ArcImsField.cs" />
+    <Compile Include="ArcIms\ArcImsGeocodeService.cs" />
+    <Compile Include="ArcIms\ArcImsHost.cs" />
+    <Compile Include="ArcIms\ArcImsLayer.cs" />
+    <Compile Include="ArcIms\ArcImsLegend.cs" />
+    <Compile Include="ArcIms\ArcImsLegendClass.cs" />
+    <Compile Include="ArcIms\ArcImsLegendGroup.cs" />
+    <Compile Include="ArcIms\ArcImsMap.cs" />
+    <Compile Include="ArcIms\ArcImsService.cs" />
+    <Compile Include="ArcIms\ArcXml\Address.cs" />
+    <Compile Include="ArcIms\ArcXml\ArcXmlEnumerations.cs" />
+    <Compile Include="ArcIms\ArcXml\ArcXmlException.cs" />
+    <Compile Include="ArcIms\ArcXml\ArcXmlReader.cs" />
+    <Compile Include="ArcIms\ArcXml\ArcXmlWriter.cs" />
+    <Compile Include="ArcIms\ArcXml\Background.cs" />
+    <Compile Include="ArcIms\ArcXml\Band.cs" />
+    <Compile Include="ArcIms\ArcXml\Bands.cs" />
+    <Compile Include="ArcIms\ArcXml\Buffer.cs" />
+    <Compile Include="ArcIms\ArcXml\CallOutMarkerSymbol.cs" />
+    <Compile Include="ArcIms\ArcXml\Capabilities.cs" />
+    <Compile Include="ArcIms\ArcXml\ChartSymbol.cs" />
+    <Compile Include="ArcIms\ArcXml\ChartValue.cs" />
+    <Compile Include="ArcIms\ArcXml\Classification.cs" />
+    <Compile Include="ArcIms\ArcXml\Cleanup.cs" />
+    <Compile Include="ArcIms\ArcXml\ColorConverter.cs" />
+    <Compile Include="ArcIms\ArcXml\Coords.cs" />
+    <Compile Include="ArcIms\ArcXml\CoordSys.cs" />
+    <Compile Include="ArcIms\ArcXml\DataFrame.cs" />
+    <Compile Include="ArcIms\ArcXml\DataFrameInfo.cs" />
+    <Compile Include="ArcIms\ArcXml\DataFrameInfoList.cs" />
+    <Compile Include="ArcIms\ArcXml\Dataset.cs" />
+    <Compile Include="ArcIms\ArcXml\EnvelopeSerializer.cs" />
+    <Compile Include="ArcIms\ArcXml\Environment.cs" />
+    <Compile Include="ArcIms\ArcXml\Error.cs" />
+    <Compile Include="ArcIms\ArcXml\Exact.cs" />
+    <Compile Include="ArcIms\ArcXml\Extension.cs" />
+    <Compile Include="ArcIms\ArcXml\FClass.cs" />
+    <Compile Include="ArcIms\ArcXml\Feature.cs" />
+    <Compile Include="ArcIms\ArcXml\FeatureCoordSys.cs" />
+    <Compile Include="ArcIms\ArcXml\FeatureCount.cs" />
+    <Compile Include="ArcIms\ArcXml\Features.cs" />
+    <Compile Include="ArcIms\ArcXml\Field.cs" />
+    <Compile Include="ArcIms\ArcXml\Fields.cs" />
+    <Compile Include="ArcIms\ArcXml\FieldValue.cs" />
+    <Compile Include="ArcIms\ArcXml\FilterCoordSys.cs" />
+    <Compile Include="ArcIms\ArcXml\FromCoordSys.cs" />
+    <Compile Include="ArcIms\ArcXml\GcCount.cs" />
+    <Compile Include="ArcIms\ArcXml\GcInput.cs" />
+    <Compile Include="ArcIms\ArcXml\GcStyle.cs" />
+    <Compile Include="ArcIms\ArcXml\GcTag.cs" />
+    <Compile Include="ArcIms\ArcXml\Geocode.cs" />
+    <Compile Include="ArcIms\ArcXml\GeometrySerializer.cs" />
+    <Compile Include="ArcIms\ArcXml\GetClientServices.cs" />
+    <Compile Include="ArcIms\ArcXml\GetFeatures.cs" />
+    <Compile Include="ArcIms\ArcXml\GetGeocode.cs" />
+    <Compile Include="ArcIms\ArcXml\GetImage.cs" />
+    <Compile Include="ArcIms\ArcXml\GetLayout.cs" />
+    <Compile Include="ArcIms\ArcXml\GetProject.cs" />
+    <Compile Include="ArcIms\ArcXml\GetRasterInfo.cs" />
+    <Compile Include="ArcIms\ArcXml\GetServiceInfo.cs" />
+    <Compile Include="ArcIms\ArcXml\GradientFillSymbol.cs" />
+    <Compile Include="ArcIms\ArcXml\GroupRenderer.cs" />
+    <Compile Include="ArcIms\ArcXml\HashLineSymbol.cs" />
+    <Compile Include="ArcIms\ArcXml\Image.cs" />
+    <Compile Include="ArcIms\ArcXml\ImageGeneralization.cs" />
+    <Compile Include="ArcIms\ArcXml\ImageLimit.cs" />
+    <Compile Include="ArcIms\ArcXml\ImageProperties.cs" />
+    <Compile Include="ArcIms\ArcXml\ImageSize.cs" />
+    <Compile Include="ArcIms\ArcXml\Layer.cs" />
+    <Compile Include="ArcIms\ArcXml\LayerDef.cs" />
+    <Compile Include="ArcIms\ArcXml\LayerInfo.cs" />
+    <Compile Include="ArcIms\ArcXml\LayerInfoList.cs" />
+    <Compile Include="ArcIms\ArcXml\LayerList.cs" />
+    <Compile Include="ArcIms\ArcXml\Layers.cs" />
+    <Compile Include="ArcIms\ArcXml\Layout.cs" />
+    <Compile Include="ArcIms\ArcXml\LayoutInfo.cs" />
+    <Compile Include="ArcIms\ArcXml\Locale.cs" />
+    <Compile Include="ArcIms\ArcXml\MapUnits.cs" />
+    <Compile Include="ArcIms\ArcXml\NorthArrow.cs" />
+    <Compile Include="ArcIms\ArcXml\Object.cs" />
+    <Compile Include="ArcIms\ArcXml\Other.cs" />
+    <Compile Include="ArcIms\ArcXml\Output.cs" />
+    <Compile Include="ArcIms\ArcXml\Project.cs" />
+    <Compile Include="ArcIms\ArcXml\Properties.cs" />
+    <Compile Include="ArcIms\ArcXml\Query.cs" />
+    <Compile Include="ArcIms\ArcXml\Range.cs" />
+    <Compile Include="ArcIms\ArcXml\RasterClassification.cs" />
+    <Compile Include="ArcIms\ArcXml\RasterExact.cs" />
+    <Compile Include="ArcIms\ArcXml\RasterFillSymbol.cs" />
+    <Compile Include="ArcIms\ArcXml\RasterInfo.cs" />
+    <Compile Include="ArcIms\ArcXml\RasterMarkerSymbol.cs" />
+    <Compile Include="ArcIms\ArcXml\RasterOther.cs" />
+    <Compile Include="ArcIms\ArcXml\RasterRange.cs" />
+    <Compile Include="ArcIms\ArcXml\RasterRenderer.cs" />
+    <Compile Include="ArcIms\ArcXml\RasterShieldSymbol.cs" />
+    <Compile Include="ArcIms\ArcXml\Renderer.cs" />
+    <Compile Include="ArcIms\ArcXml\Request.cs" />
+    <Compile Include="ArcIms\ArcXml\Response.cs" />
+    <Compile Include="ArcIms\ArcXml\Scale.cs" />
+    <Compile Include="ArcIms\ArcXml\ScaleBar.cs" />
+    <Compile Include="ArcIms\ArcXml\ScaleDependentRenderer.cs" />
+    <Compile Include="ArcIms\ArcXml\Screen.cs" />
+    <Compile Include="ArcIms\ArcXml\Separators.cs" />
+    <Compile Include="ArcIms\ArcXml\Service.cs" />
+    <Compile Include="ArcIms\ArcXml\ServiceInfo.cs" />
+    <Compile Include="ArcIms\ArcXml\Services.cs" />
+    <Compile Include="ArcIms\ArcXml\ShieldSymbol.cs" />
+    <Compile Include="ArcIms\ArcXml\SimpleLabelRenderer.cs" />
+    <Compile Include="ArcIms\ArcXml\SimpleLineSymbol.cs" />
+    <Compile Include="ArcIms\ArcXml\SimpleMarkerSymbol.cs" />
+    <Compile Include="ArcIms\ArcXml\SimplePolygonSymbol.cs" />
+    <Compile Include="ArcIms\ArcXml\SimpleRenderer.cs" />
+    <Compile Include="ArcIms\ArcXml\SpatialFilter.cs" />
+    <Compile Include="ArcIms\ArcXml\SpatialQuery.cs" />
+    <Compile Include="ArcIms\ArcXml\Symbol.cs" />
+    <Compile Include="ArcIms\ArcXml\TargetLayer.cs" />
+    <Compile Include="ArcIms\ArcXml\Text.cs" />
+    <Compile Include="ArcIms\ArcXml\TextMarkerSymbol.cs" />
+    <Compile Include="ArcIms\ArcXml\TextSymbol.cs" />
+    <Compile Include="ArcIms\ArcXml\Toc.cs" />
+    <Compile Include="ArcIms\ArcXml\TocClass.cs" />
+    <Compile Include="ArcIms\ArcXml\TocGroup.cs" />
+    <Compile Include="ArcIms\ArcXml\ToCoordSys.cs" />
+    <Compile Include="ArcIms\ArcXml\TrueTypeMarkerSymbol.cs" />
+    <Compile Include="ArcIms\ArcXml\ValueMapLabelRenderer.cs" />
+    <Compile Include="ArcIms\ArcXml\ValueMapRenderer.cs" />
+    <Compile Include="ArcIms\SwatchMaker.cs" />
+    <Compile Include="ArcIms\TocLoader.cs" />
+    <Compile Include="CommonDataFrame.cs" />
+    <Compile Include="CommonField.cs" />
+    <Compile Include="CommonGeocodeService.cs" />
+    <Compile Include="CommonHost.cs" />
+    <Compile Include="CommonLayer.cs" />
+    <Compile Include="CommonLegend.cs" />
+    <Compile Include="CommonLegendClass.cs" />
+    <Compile Include="CommonLegendGroup.cs" />
+    <Compile Include="CommonMap.cs" />
+    <Compile Include="CommonMapService.cs" />
+    <Compile Include="Transform\ConformalTransformation.cs" />
+    <Compile Include="GeometryExtensions.cs" />
+    <Compile Include="MapGraphics.cs" />
+    <Compile Include="Transform\ProjectiveTransformation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transform\Transformation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ags\Proxy\Services_Generator.xml" />
+    <None Include="NOTICE" />
+    <None Include="LICENSE" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
