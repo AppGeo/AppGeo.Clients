@@ -38,9 +38,11 @@ namespace AppGeo.Clients.Ags
     private ServiceDescription[] _serviceDescriptions = null;
     private AgsTokenService _tokenService = null;
 
-    public AgsHost(string serverUrl) : this(serverUrl, null, null) { }
+    public AgsHost(string serverUrl) : this(serverUrl, null, null, false) { }
 
-    public AgsHost(string serverUrl, string user, string password)
+    public AgsHost(string serverUrl, string user, string password) : this(serverUrl, user, password, false) { }
+
+    public AgsHost(string serverUrl, string user, string password, bool useTokenService)
     {
 			ServerUrl = serverUrl;
 			User = user;
@@ -57,7 +59,7 @@ namespace AppGeo.Clients.Ags
 
       Catalog catalog = new Catalog(url.ToString());
 
-      if (!String.IsNullOrEmpty(user) && catalog.RequiresTokens())
+      if (!String.IsNullOrEmpty(user) && useTokenService)
       {
         string tokenServiceUrl = catalog.GetTokenServiceURL();
         _tokenService = new AgsTokenService(tokenServiceUrl, user, password);
@@ -129,6 +131,8 @@ namespace AppGeo.Clients.Ags
           case esriArcGISVersion.esriArcGISVersion90: return "9.0";
           case esriArcGISVersion.esriArcGISVersion92: return "9.2";
           case esriArcGISVersion.esriArcGISVersion93: return "9.3";
+          case esriArcGISVersion.esriArcGISVersion10: return "10.0";
+          case esriArcGISVersion.esriArcGISVersion101: return "10.1";
           default: return "";
         }
       }

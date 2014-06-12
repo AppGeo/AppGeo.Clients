@@ -60,7 +60,7 @@ process the geometry with other compatible libraries.
 * Map features contain OGC geometry through GeoAPI and NetTopologySuite.
 * Automatically vectorizes parametric curves returned from ArcGIS for Server.
 * MapGraphics class extends System.Drawing.Graphics to support the drawing of OGC geometry.
-* Can access secured map services; transparently handles token-based security in ArcGIS for Server.
+* Can access secured map services, supports Windows and token-based authentication in ArcGIS for Server.
 * All classes in AppGeo.Clients.Ags are Serializable for caching to any object store.
 * Communicates with ArcGIS for Server is via its [SOAP SDK](http://resources.arcgis.com/en/help/soap/10.2/).  
 * Dumps SOAP traffic to the debug window or a trace log with the AgsDebug and AgsTrace switches in a &lt;system.diagnostics&gt; configuration.

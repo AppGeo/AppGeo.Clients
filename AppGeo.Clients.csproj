@@ -298,13 +298,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ags\Proxy\Services_Generator.xml" />
+    <None Include="ClassDiagram.cd" />
     <None Include="NOTICE" />
     <None Include="LICENSE" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup />
