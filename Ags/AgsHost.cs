@@ -40,7 +40,7 @@ namespace AppGeo.Clients.Ags
 
     public AgsHost(string serverUrl) : this(serverUrl, null, null, false) { }
 
-    public AgsHost(string serverUrl, string user, string password) : this(serverUrl, user, password, false) { }
+    public AgsHost(string serverUrl, string user, string password) : this(serverUrl, user, password, true) { }
 
     public AgsHost(string serverUrl, string user, string password, bool useTokenService)
     {
@@ -133,6 +133,7 @@ namespace AppGeo.Clients.Ags
           case esriArcGISVersion.esriArcGISVersion93: return "9.3";
           case esriArcGISVersion.esriArcGISVersion10: return "10.0";
           case esriArcGISVersion.esriArcGISVersion101: return "10.1";
+          case esriArcGISVersion.esriArcGISVersion103: return "10.3";
           default: return "";
         }
       }

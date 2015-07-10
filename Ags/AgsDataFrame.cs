@@ -34,7 +34,7 @@ namespace AppGeo.Clients.Ags
       IsDefault = isDefault;
       
       ImageType imageType = new ImageType(esriImageFormat.esriImagePNG, esriImageReturnType.esriImageReturnMimeData);
-      MapServerLegendInfo[] legendInfos = service.MapServer.GetLegendInfo(mapServerInfo.Name, null, null, imageType, null, null);
+      MapServerLegendInfo[] legendInfos = service.MapServer.GetLegendInfo(mapServerInfo.Name, null, null, imageType);
 
       foreach (MapLayerInfo mapLayerInfo in mapServerInfo.MapLayerInfos)
       {

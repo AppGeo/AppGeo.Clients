@@ -29,7 +29,7 @@
        - In the CircularArc and EllipticArc classes, change the types of the following from Point to PointN:
          o the centerPointField field 
          o the CenterPoint property
-       - In esriImageFormat verify that there is a esriImagePNG32 value after esriImageSVG
+       - In esriImageFormat verify that there is an esriImagePNG32 value after esriImageSVG
          o if not, add it by hand
    
    To find AGS service endpoints on the Web, open a search engine and search with the terms:
@@ -48,34 +48,34 @@
   <documents>
 
     <!-- Catalog -->
-    <document>http://geodata.webapi.ubc.ca/arcgis/services/Base/Catalog?wsdl</document>
+    <document>http://sampleserver6.arcgisonline.com/arcgis/services?wsdl</document>
 
     <!-- MapServer -->
-    <document>http://geodata.webapi.ubc.ca/arcgis/services/Base/Ortho2011/MapServer?wsdl</document>
+    <document>http://sampleserver6.arcgisonline.com/arcgis/services/Census/MapServer?wsdl</document>
 
     <!-- FeatureServer -->
-    <document>http://arcgis.dtsagile.com/arcgis/services/WildfireMaps/CrowdSource/MapServer/FeatureServer?wsdl</document>
+    <document>http://sampleserver6.arcgisonline.com/arcgis/services/EmergencyFacilities/MapServer/FeatureServer?wsdl</document>
     
     <!-- GeocodeServer -->
-    <document>http://services.arcgisonline.co.nz/arcgis/services/LINZ/gazetteer/GeocodeServer?wsdl</document>
+    <document>http://sampleserver6.arcgisonline.com/arcgis/services/Locators/Composite_HBR_Asset/GeocodeServer?wsdl</document>
     
     <!-- GeometryServer -->
-    <document>http://services.arcgisonline.co.nz/arcgis/services/Utilities/Geometry/GeometryServer?wsdl</document>
+    <document>http://sampleserver6.arcgisonline.com/arcgis/services/Geometry/GeometryServer?wsdl</document>
 
     <!-- GPServer -->
-    <document>http://siselvideo.com/arcgis/services/WorldBank_KRG/Export_to_Shapefile/GPServer?wsdl</document>
+    <document>http://sampleserver6.arcgisonline.com/arcgis/services/GDBVersions/GPServer?wsdl</document>
 
     <!-- ImageServer -->
-    <document>http://www.srvy.co/arcgis/services/Afghan_16/ImageServer?wsdl</document>
+    <document>http://sampleserver6.arcgisonline.com/arcgis/services/NLCDLandCover2001/ImageServer?wsdl</document>
 
     <!-- GeoDataServer -->
-    <!--<document>?wsdl</document>-->
+    <document>http://gis.dogis.org/arcgis/services/raster_gis/GeoDataServer?wsdl</document>
 
     <!-- NAServer -->
-    <document>http://energysampleserver.esri.com/arcgis/services/Haynesville/Transportation/MapServer/NAServer?wsdl</document>
+    <document>http://smart.uji.es/adaptor/services/pruebasNetwork/closestFacility/MapServer/NAServer?wsdl</document>
     
     <!-- MobileServer -->
-    <document>http://energysampleserver.esri.com/arcgis/services/UK/Operational/MapServer/MobileServer?wsdl</document>
+    <document>https://services.femadata.com/arcgis/services/USAR_Collector/MapServer/MobileServer?wsdl</document>
   </documents>
   <webReferenceOptions>
     <verbose>false</verbose>
