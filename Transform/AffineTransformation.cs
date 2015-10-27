@@ -84,8 +84,9 @@ namespace AppGeo.Clients.Transform
 
     public override Coordinate ReverseTransform(Coordinate c)
     {
-      double x = (C[4] * (c.X - C[2]) + C[1] * (C[5] - c.Y)) / (C[0] * C[4] - C[1] * C[3]);
-      double y = C[1] != 0 ? (c.X - x * C[0] - C[2]) / C[1] : (c.Y - x * C[3] - C[5]) / C[4];
+      double d = C[0] * C[4] - C[1] * C[3];
+      double x = (C[4] * (c.X - C[2]) + C[1] * (C[5] - c.Y)) / d;
+      double y = (-C[3] * c.X + C[0] * c.Y + C[3] * C[2] - C[0] * C[5]) / d;
       return new Coordinate(x, y);
     }
   }

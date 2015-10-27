@@ -41,11 +41,11 @@ namespace AppGeo.Clients
 
       if (envelope.Width / envelope.Height > newAspectRatio)
       {
-        envelope.ExpandBy(0, envelope.Width / newAspectRatio - envelope.Height);
+        envelope.ExpandBy(0, (envelope.Width / newAspectRatio - envelope.Height) * 0.5);
       }
       else
       {
-        envelope.ExpandBy(envelope.Height * newAspectRatio - envelope.Width, 0);
+        envelope.ExpandBy((envelope.Height * newAspectRatio - envelope.Width) * 0.5, 0);
       }
     }
 
