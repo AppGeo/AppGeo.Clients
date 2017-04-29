@@ -31,7 +31,7 @@ namespace AppGeo.Clients.Ags.Proxy
     public static MultipointN FromCommon(IMultiPoint commonMultiPoint)
     {
       MultipointN agsMultiPoint = new MultipointN();
-      agsMultiPoint.PointArray = commonMultiPoint.Select(o => PointN.FromCommon(o)).Cast<Point>().ToArray();
+      agsMultiPoint.PointArray = commonMultiPoint.Geometries.Select(o => PointN.FromCommon(o)).Cast<Point>().ToArray();
       return agsMultiPoint;
     }
   }
