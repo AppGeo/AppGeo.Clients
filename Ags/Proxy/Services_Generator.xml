@@ -50,34 +50,31 @@
   <documents>
 
     <!-- Catalog -->
-    <document>http://maps.westfield.in.gov:6080/arcgis/services/flex2?wsdl</document> 
+    <document>https://sampleserver6.arcgisonline.com/arcgis/services?wsdl</document> 
 
     <!-- MapServer -->
-    <document>http://maps.westfield.in.gov:6080/arcgis/services/flex2/AccidentData/MapServer?wsdl</document> 
+    <document>https://sampleserver6.arcgisonline.com/arcgis/services/911CallsHotspot/MapServer?wsdl</document> 
 
     <!-- FeatureServer -->
-    <document>http://maps.westfield.in.gov:6080/arcgis/services/flex2/ADA/MapServer/FeatureServer?wsdl</document> 
+    <document>https://sampleserver6.arcgisonline.com/arcgis/services/DamageAssessment/MapServer/FeatureServer?wsdl</document> 
 
     <!-- GeocodeServer -->
-    <document>http://geocodedev.arcgis.com/arcgis/services/World/GeocodeServer?wsdl</document> 
+    <document>https://services.nyserda.ny.gov/arcgis/services/Locator/Queens/GeocodeServer?wsdl</document> 
 
     <!-- GeometryServer -->
-    <document>http://descubracasino.com.br/arcgis/services/Geometry/GeometryServer?wsdl</document> 
+    <document>https://gis.anaheim.net/server/services/Utilities/Geometry/GeometryServer?wsdl</document> 
 
     <!-- GPServer -->
-    <document>http://map.gsa.state.al.us/ogbmaps/services/CMSP/CMSPExportWebMap/GPServer?wsdl</document> 
+    <document>https://sampleserver6.arcgisonline.com/arcgis/services/911CallsHotspot/GPServer?wsdl</document> 
 
     <!-- ImageServer -->
-    <document>http://imageserverintra.miamidade.gov/ArcGIS/services/Sanborn2015/ImageServer?wsdl</document> 
+    <document>https://sampleserver6.arcgisonline.com/arcgis/services/CharlotteLAS/ImageServer?wsdl</document> 
 
     <!-- GeoDataServer -->
-    <document>http://www.geo.co.clay.mn.us/arcgis/services/GeoData/GeoData/GeoDataServer?wsdl</document> 
+    <document>http://webgis.uwm.edu/arcgisuwm/services/CartLab/GeoDataServer?wsdl</document> 
 
     <!-- NAServer -->
-    <document>http://arcgisserver.maine.gov/arcgis/services/mdot/MaineDOT_Network/MapServer/NAServer?wsdl</document> 
-
-    <!-- MobileServer -->
-    <document>https://maps.carbon.utah.gov/arcgis/services/LatLong/MapServer/MobileServer?wsdl</document>
+    <document>https://maps.cpc-fis.vanderbilt.edu/arcgis/services/Routing/MapServer/NAServer?wsdl</document> 
     
   </documents>
   <webReferenceOptions>

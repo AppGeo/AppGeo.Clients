@@ -31,15 +31,10 @@ namespace AppGeo.Clients.Ags.Proxy
           return new GeometryServer(Url);
         case "GPServer":
           return new GPServer(Url);
-        // TODO: reenable
-        //case "GeoDataServer":
-        //  return new GeoDataServer(Url);
         case "ImageServer":
           return new ImageServer(Url);
         case "NAServer":
           return new NAServer(Url);
-        case "MobileServer":
-          return new MobileServer(Url);
         default:
           throw new NotSupportedException(String.Format("Cannot return a service of type {0}, not supported.", Type));
       }

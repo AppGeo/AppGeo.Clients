@@ -122,7 +122,6 @@
     <Compile Include="Ags\Proxy\MapServerDefinition.cs" />
     <Compile Include="Ags\Proxy\MapServerInfo.cs" />
     <Compile Include="Ags\Proxy\MarkerElement.cs" />
-    <Compile Include="Ags\Proxy\MobileServer.cs" />
     <Compile Include="Ags\Proxy\Multipoint.cs" />
     <Compile Include="Ags\Proxy\MultipointN.cs" />
     <Compile Include="Ags\Proxy\NAServer.cs" />
