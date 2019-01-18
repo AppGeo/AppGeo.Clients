@@ -24,15 +24,27 @@ namespace AppGeo.Clients.Ags
     private static object GetTokenLock = new object();
 
     private AgsAuthenticationToken _token = null;
+    private string _requestUrl = null;
+    private bool _isPortal = false;
 
-    public AgsTokenService(string url, string user, string password)
+    public AgsTokenService(string tokenUrl, string serverUrl, string user, string password)
     {
-      Url = url;
+      TokenUrl = tokenUrl;
+      ServerUrl = serverUrl.Replace("/services", "");
       User = user;
       Password = password;
+
+      _requestUrl = TokenUrl;
+      _isPortal = _requestUrl.EndsWith("/sharing/rest/generateToken");
+
+      if (!_isPortal)
+      {
+        _requestUrl += "generateToken";
+      }
     }
 
-    public string Url { get; private set; }
+    public string TokenUrl { get; private set; }
+    public string ServerUrl { get; private set; }
     public string User { get; private set; }
     public string Password { get; private set; }
 
@@ -47,38 +59,53 @@ namespace AppGeo.Clients.Ags
 
         if (_token == null)
         {
-          string requestUrl = Url + "generateToken";
-          string data = String.Format("f=json&username={0}&password={1}&client=requestip", User, Password);
-          string json;
-
-          try
+          if (!_isPortal)
           {
-            WebRequest request = WebRequest.Create(requestUrl);
-            request.Method = "POST";
-            request.ContentType = "application/x-www-form-urlencoded";
-
-            using (StreamWriter writer = new StreamWriter(request.GetRequestStream()))
-            {
-              writer.Write(data);
-            }
-
-            WebResponse response = request.GetResponse();
-
-            using (StreamReader reader = new StreamReader(response.GetResponseStream()))
-            {
-              json = reader.ReadToEnd();
-            }
+            string json = RequestToken(String.Format("f=json&username={0}&password={1}&client=requestip", User, Password));
+            _token = AgsAuthenticationToken.Deserialize(json);
           }
-          catch (Exception ex)
+          else
           {
-            throw new AgsException("Error communicating with the ArcGIS Server token service", ex);
-          }
+            string json = RequestToken(String.Format("f=json&username={0}&password={1}&referer=x", User, Password));
+            _token = AgsAuthenticationToken.Deserialize(json);
 
-          _token = AgsAuthenticationToken.Deserialize(json);
+            json = RequestToken(String.Format("f=json&username={0}&password={1}&referer=x&token={2}&serverURL={3}", User, Password, _token.Value, ServerUrl));
+            _token = AgsAuthenticationToken.Deserialize(json);
+          }
         }
       }
 
       return _token;
+    }
+
+    private string RequestToken(string data)
+    {
+      string json;
+
+      try
+      {
+        WebRequest request = WebRequest.Create(_requestUrl);
+        request.Method = "POST";
+        request.ContentType = "application/x-www-form-urlencoded";
+
+        using (StreamWriter writer = new StreamWriter(request.GetRequestStream()))
+        {
+          writer.Write(data);
+        }
+
+        WebResponse response = request.GetResponse();
+
+        using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+        {
+          json = reader.ReadToEnd();
+        }
+      }
+      catch (Exception ex)
+      {
+        throw new AgsException("Error communicating with the ArcGIS Server token service", ex);
+      }
+
+      return json;
     }
   }
 }

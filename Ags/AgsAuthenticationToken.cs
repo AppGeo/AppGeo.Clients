@@ -22,11 +22,21 @@ namespace AppGeo.Clients.Ags
   [Serializable]
   public class AgsAuthenticationToken
   {
-    private static Regex JsonRegex = new Regex("^{\"token\":\"(\\S+)\",\"expires\":(\\d+)}$");
-
+    private static Regex JsonRegex = new Regex("^{\"token\":\"(\\S+)\",\"expires\":(\\d+)[^}]*}$");
+    private static Regex ErrorRegex = new Regex("^{\"error\":{\"code\":\\d+,\"message\":\"(.*)\",\"details\":\\[?\"(.*)\".*\\]?}}$");
+    
     public static AgsAuthenticationToken Deserialize(string json)
     {
-      Match match = JsonRegex.Match(json);
+      Match match = ErrorRegex.Match(json);
+
+      if (match.Success)
+      {
+        string message = match.Groups[1].Captures[0].Value;
+        string details = match.Groups[2].Captures[0].Value;
+        throw new AgsException(String.Format("{0} {1}", message, details).Trim());
+      }
+
+      match = JsonRegex.Match(json);
 
       if (match.Success)
       {

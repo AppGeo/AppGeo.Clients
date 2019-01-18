@@ -29,14 +29,14 @@
        - In the CircularArc and EllipticArc classes, change the types of the following from Point to PointN:
          o the centerPointField field 
          o the CenterPoint property
-       - In esriArcGISVersion verify that there is an esriArcGISVersion104 value after esriArcGISVersion103
+       - In esriArcGISVersion verify that there is an esriArcGISVersion106 value after esriArcGISVersion105
          o if not, add it by hand
        - In esriImageFormat verify that there is an esriImagePNG32 value after esriImageSVG
          o if not, add it by hand
    
    To find AGS service endpoints on the Web, open a search engine and search with the terms:
    
-     "Current Version: 10.4" MapServer
+     "Current Version: 10.6" MapServer
    
    changing the version number and service type as appropriate.
 -->

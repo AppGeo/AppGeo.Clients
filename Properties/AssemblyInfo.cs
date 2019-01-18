@@ -1,4 +1,4 @@
-﻿//  Copyright 2012 Applied Geographics, Inc.
+﻿//  Copyright 2019 Applied Geographics, Inc.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -20,11 +20,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("AppGeo Geospatial Web Clients")]
-[assembly: AssemblyDescription("Compatible with ArcGIS Server 10.1, 10.2, 10.3 and ArcIMS 9.3")]
-[assembly: AssemblyConfiguration("production (token)")]
+[assembly: AssemblyDescription("Compatible with ArcGIS Server 10.1 through 10.6 and ArcIMS 9.3")]
+[assembly: AssemblyConfiguration("production")]
 [assembly: AssemblyCompany("Applied Geographics, Inc.")]
 [assembly: AssemblyProduct("AppGeo Geospatial Web Clients")]
-[assembly: AssemblyCopyright(@"Copyright 2014 Applied Geographics, Inc.
+[assembly: AssemblyCopyright(@"Copyright 2019 Applied Geographics, Inc.
 
 Licensed under the Apache License, Version 2.0 (the ""License"");
 you may not use this file except in compliance with the License.
@@ -58,5 +58,5 @@ limitations under the License.")]
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.5.2.0")]
-[assembly: AssemblyFileVersion("1.5.2.0")]
+[assembly: AssemblyVersion("1.6.0.0")]
+[assembly: AssemblyFileVersion("1.6.0.0")]

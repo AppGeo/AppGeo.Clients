@@ -54,7 +54,7 @@ namespace AppGeo.Clients.Ags
 
       if (url.Path == "/")
       {
-        url.Path = "/ArcGIS/services";
+        url.Path = "/arcgis/services";
       }
 
       Catalog catalog = new Catalog(url.ToString());
@@ -62,7 +62,7 @@ namespace AppGeo.Clients.Ags
       if (!String.IsNullOrEmpty(user) && useTokenService)
       {
         string tokenServiceUrl = catalog.GetTokenServiceURL();
-        _tokenService = new AgsTokenService(tokenServiceUrl, user, password);
+        _tokenService = new AgsTokenService(tokenServiceUrl, url.ToString(), user, password);
       }
 
       AddCredentials(catalog);
@@ -134,6 +134,9 @@ namespace AppGeo.Clients.Ags
           case esriArcGISVersion.esriArcGISVersion10: return "10.0";
           case esriArcGISVersion.esriArcGISVersion101: return "10.1";
           case esriArcGISVersion.esriArcGISVersion103: return "10.3";
+          case esriArcGISVersion.esriArcGISVersion104: return "10.4";
+          case esriArcGISVersion.esriArcGISVersion105: return "10.5";
+          case esriArcGISVersion.esriArcGISVersion106: return "10.6";
           default: return "";
         }
       }
