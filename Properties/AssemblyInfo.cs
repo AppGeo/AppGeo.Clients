@@ -19,8 +19,8 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AppGeo Geospatial Web Clients")]
-[assembly: AssemblyDescription("Compatible with ArcGIS Server 10.1 through 10.6 and ArcIMS 9.3")]
+[assembly: AssemblyTitle("For AGS 10.1 - 10.7, ArcIMS 9.3")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("production")]
 [assembly: AssemblyCompany("Applied Geographics, Inc.")]
 [assembly: AssemblyProduct("AppGeo Geospatial Web Clients")]

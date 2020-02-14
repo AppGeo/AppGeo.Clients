@@ -36,7 +36,7 @@
    
    To find AGS service endpoints on the Web, open a search engine and search with the terms:
    
-     "Current Version: 10.6" MapServer
+     "Current Version: 10.7" MapServer
    
    changing the version number and service type as appropriate.
 -->
@@ -50,31 +50,31 @@
   <documents>
 
     <!-- Catalog -->
-    <document>https://sampleserver6.arcgisonline.com/arcgis/services?wsdl</document> 
+    <document>http://mapserv.utah.gov/arcgis/services?wsdl</document> 
 
     <!-- MapServer -->
-    <document>https://sampleserver6.arcgisonline.com/arcgis/services/911CallsHotspot/MapServer?wsdl</document> 
+    <document>http://www1.cityofwebster.com/arcgis/services/Collector/City_Limits/MapServer?wsdl</document> 
 
     <!-- FeatureServer -->
-    <document>https://sampleserver6.arcgisonline.com/arcgis/services/DamageAssessment/MapServer/FeatureServer?wsdl</document> 
+    <document>http://www.unionco.org/unioncomaps/services/Layers/RoadClosures/MapServer/FeatureServer?wsdl</document> 
 
     <!-- GeocodeServer -->
-    <document>https://services.nyserda.ny.gov/arcgis/services/Locator/Queens/GeocodeServer?wsdl</document> 
+    <document>http://mapserv.utah.gov/arcgis/services/Geolocators/AddressPoints_AddressSystem/GeocodeServer?wsdl</document> 
 
     <!-- GeometryServer -->
-    <document>https://gis.anaheim.net/server/services/Utilities/Geometry/GeometryServer?wsdl</document> 
+    <document>http://mapserv.utah.gov/arcgis/services/Geometry/GeometryServer?wsdl</document> 
 
     <!-- GPServer -->
-    <document>https://sampleserver6.arcgisonline.com/arcgis/services/911CallsHotspot/GPServer?wsdl</document> 
+    <document>http://mapserv.utah.gov/arcgis/services/Utilities/PrintingTools/GPServer?wsdl</document> 
 
     <!-- ImageServer -->
-    <document>https://sampleserver6.arcgisonline.com/arcgis/services/CharlotteLAS/ImageServer?wsdl</document> 
+    <document>http://mapserv.utah.gov/arcgis/services/DEM/ImageServer?wsdl</document> 
 
     <!-- GeoDataServer -->
-    <document>http://webgis.uwm.edu/arcgisuwm/services/CartLab/GeoDataServer?wsdl</document> 
+    <document>http://fbc-arcgis.co.freeborn.mn.us/arcgis/services/MyGeoDataService/GeoDataServer?wsdl</document> 
 
     <!-- NAServer -->
-    <document>https://maps.cpc-fis.vanderbilt.edu/arcgis/services/Routing/MapServer/NAServer?wsdl</document> 
+    <document>http://maps.berkeleywv.org/speedo/services/BC_Routing/BC_ROUTING/MapServer/NAServer?wsdl</document> 
     
   </documents>
   <webReferenceOptions>
