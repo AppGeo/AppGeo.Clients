@@ -25,10 +25,12 @@ namespace AppGeo.Clients.Ags.Proxy
       {
         case "MapServer":
           return new MapServer(Url);
+        case "FeatureServer":
+          return new FeatureServer(Url);
         case "GeocodeServer":
           return new GeocodeServer(Url);
-        case "GeometryServer":
-          return new GeometryServer(Url);
+        //case "GeometryServer":
+        //  return new GeometryServer(Url);
         case "GPServer":
           return new GPServer(Url);
         case "ImageServer":

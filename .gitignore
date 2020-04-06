@@ -1,4 +1,8 @@
+.vs
 bin/Debug
 obj
 *.user
+*.sln
 *.suo
+*.zip
+AppGeo.Clients_*.*

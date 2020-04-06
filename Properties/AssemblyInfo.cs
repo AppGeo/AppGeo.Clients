@@ -19,12 +19,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("For AGS 10.1 - 10.7, ArcIMS 9.3")]
+[assembly: AssemblyTitle("For AGS 10.1 - 10.8, ArcIMS 9.3")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("production")]
 [assembly: AssemblyCompany("Applied Geographics, Inc.")]
 [assembly: AssemblyProduct("AppGeo Geospatial Web Clients")]
-[assembly: AssemblyCopyright(@"Copyright 2019 Applied Geographics, Inc.
+[assembly: AssemblyCopyright(@"Copyright 2020 Applied Geographics, Inc.
 
 Licensed under the Apache License, Version 2.0 (the ""License"");
 you may not use this file except in compliance with the License.
@@ -58,5 +58,5 @@ limitations under the License.")]
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.6.0.0")]
-[assembly: AssemblyFileVersion("1.6.0.0")]
+[assembly: AssemblyVersion("1.7.0.0")]
+[assembly: AssemblyFileVersion("1.7.0.0")]

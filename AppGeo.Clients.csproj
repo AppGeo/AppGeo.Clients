@@ -77,6 +77,12 @@
   <ItemGroup>
     <Compile Include="Ags\AgsAuthenticationToken.cs" />
     <Compile Include="Ags\AgsTokenService.cs" />
+    <Compile Include="Ags\Proxy\FeatureServer.cs" />
+    <Compile Include="Ags\Proxy\GeoDataServer.cs" />
+    <Compile Include="Ags\Proxy\GeometryServer.cs" />
+    <Compile Include="Ags\Proxy\GPServer.cs" />
+    <Compile Include="Ags\Proxy\ImageServer.cs" />
+    <Compile Include="Ags\Proxy\NAServer.cs" />
     <Compile Include="FeatureData.cs" />
     <Compile Include="FeatureRow.cs" />
     <Compile Include="Transform\AffineTransformation.cs" />
@@ -103,16 +109,12 @@
     <Compile Include="Ags\Proxy\EllipticArc.cs" />
     <Compile Include="Ags\Proxy\Envelope.cs" />
     <Compile Include="Ags\Proxy\EnvelopeN.cs" />
-    <Compile Include="Ags\Proxy\FeatureServer.cs" />
     <Compile Include="Ags\Proxy\Field.cs" />
     <Compile Include="Ags\Proxy\GeocodeServer.cs" />
     <Compile Include="Ags\Proxy\GeographicCoordinateSystem.cs" />
     <Compile Include="Ags\Proxy\Geometry.cs" />
-    <Compile Include="Ags\Proxy\GeometryServer.cs" />
-    <Compile Include="Ags\Proxy\GPServer.cs" />
     <Compile Include="Ags\Proxy\ImageDescription.cs" />
     <Compile Include="Ags\Proxy\ImageDisplay.cs" />
-    <Compile Include="Ags\Proxy\ImageServer.cs" />
     <Compile Include="Ags\Proxy\ImageType.cs" />
     <Compile Include="Ags\Proxy\Line.cs" />
     <Compile Include="Ags\Proxy\LineElement.cs" />
@@ -124,7 +126,6 @@
     <Compile Include="Ags\Proxy\MarkerElement.cs" />
     <Compile Include="Ags\Proxy\Multipoint.cs" />
     <Compile Include="Ags\Proxy\MultipointN.cs" />
-    <Compile Include="Ags\Proxy\NAServer.cs" />
     <Compile Include="Ags\Proxy\Path.cs" />
     <Compile Include="Ags\Proxy\Point.cs" />
     <Compile Include="Ags\Proxy\PointN.cs" />

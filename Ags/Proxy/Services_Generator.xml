@@ -29,14 +29,14 @@
        - In the CircularArc and EllipticArc classes, change the types of the following from Point to PointN:
          o the centerPointField field 
          o the CenterPoint property
-       - In esriArcGISVersion verify that there is an esriArcGISVersion106 value after esriArcGISVersion105
+       - In esriArcGISVersion verify that there is an esriArcGISVersion108 value after esriArcGISVersion107
          o if not, add it by hand
        - In esriImageFormat verify that there is an esriImagePNG32 value after esriImageSVG
          o if not, add it by hand
    
    To find AGS service endpoints on the Web, open a search engine and search with the terms:
    
-     "Current Version: 10.7" MapServer
+     "Current Version: 10.8" MapServer
    
    changing the version number and service type as appropriate.
 -->
@@ -50,32 +50,32 @@
   <documents>
 
     <!-- Catalog -->
-    <document>http://mapserv.utah.gov/arcgis/services?wsdl</document> 
+    <document>https://dot.esri.com/server/services?wsdl</document> 
 
     <!-- MapServer -->
-    <document>http://www1.cityofwebster.com/arcgis/services/Collector/City_Limits/MapServer?wsdl</document> 
+    <document>https://dot.esri.com/server/services/MassDOT_Traffic_Cams/MapServer?wsdl</document>
 
     <!-- FeatureServer -->
-    <document>http://www.unionco.org/unioncomaps/services/Layers/RoadClosures/MapServer/FeatureServer?wsdl</document> 
+    <document>https://dot.esri.com/server/services/MassDOT_Traffic_Cams/MapServer/FeatureServer?wsdl</document>
 
     <!-- GeocodeServer -->
-    <document>http://mapserv.utah.gov/arcgis/services/Geolocators/AddressPoints_AddressSystem/GeocodeServer?wsdl</document> 
+    <document>https://cofgis.fairfaxva.gov/arcgis/services/DBO_Address_Point_CreateAddress/GeocodeServer?wsdl</document>
 
     <!-- GeometryServer -->
-    <document>http://mapserv.utah.gov/arcgis/services/Geometry/GeometryServer?wsdl</document> 
+    <!-- <document></document> -->
 
     <!-- GPServer -->
-    <document>http://mapserv.utah.gov/arcgis/services/Utilities/PrintingTools/GPServer?wsdl</document> 
+    <document>http://dot2.esri.com/arcgis/services/MapIT/ExportWebMap/GPServer?wsdl</document>
 
     <!-- ImageServer -->
-    <document>http://mapserv.utah.gov/arcgis/services/DEM/ImageServer?wsdl</document> 
+    <document>https://dot2.esri.com/arcgis/services/Historic_NexRAD/ImageServer?wsdl</document>
 
     <!-- GeoDataServer -->
-    <document>http://fbc-arcgis.co.freeborn.mn.us/arcgis/services/MyGeoDataService/GeoDataServer?wsdl</document> 
+    <!-- <document></document> -->
 
     <!-- NAServer -->
-    <document>http://maps.berkeleywv.org/speedo/services/BC_Routing/BC_ROUTING/MapServer/NAServer?wsdl</document> 
-    
+    <document>https://gissrv01.fhws.de/arcgis/services/Abschlussarbeit/AED_Kataster_Wuerzburg/MapServer/NAServer?wsdl</document>
+
   </documents>
   <webReferenceOptions>
     <verbose>false</verbose>

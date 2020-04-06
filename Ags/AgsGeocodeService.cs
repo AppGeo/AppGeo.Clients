@@ -69,7 +69,7 @@ namespace AppGeo.Clients.Ags
       get 
       {
         PropertySetProperty prop = _locatorProperties.PropertyArray.FirstOrDefault(o => o.Key == "SideOffsetUnits");
-        return prop == null ? "unknown" : ((Unit)prop.Value).WKT;
+        return prop == null ? "unknown" : prop.Value.ToString();
       }
     }
 
